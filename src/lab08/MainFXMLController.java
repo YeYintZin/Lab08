@@ -49,32 +49,32 @@ public class MainFXMLController {
     private Paint brushColor = Color.BLACK;
 
     public void initialize() {
-        blackRadio.setUserData (Color.BLACK);
-        redRadio.setUserData (Color.RED);
-        greenRadio.setUserData (Color.GREEN);
+        blackRadio.setUserData(Color.BLACK);
+        redRadio.setUserData(Color.RED);
+        greenRadio.setUserData(Color.GREEN);
         blueRadio.setUserData(Color.BLUE);
-        smallRadio.setUserData (PenSize.SMALL);
-        mediumRadio.setUserData (PenSize.MEDIUM);
-        largeRadio.setUserData (PenSize.LARGE);
+        smallRadio.setUserData(2);
+        mediumRadio.setUserData(4);
+        largeRadio.setUserData(6);
     }    
 
     @FXML
-    private void colorRadioButtonSelected(ActionEvent e) {
-        
+    private Color colorRadioButtonSelected() {
+        return (Color) group2.getSelectedToggle().getUserData();
     }
 
     @FXML
-    private void sizeRadioButtonSelected(ActionEvent e) {
-        
+    private int sizeRadioButtonSelected() {
+        return (int) group1.getSelectedToggle().getUserData();
     }
 
     @FXML
-    private void undoButtonPressed(ActionEvent event) {
+    private void undoButtonPressed() {
         drawingAreaPane.getChildren().remove(drawingAreaPane.getChildren().size() - 1);
     }
 
     @FXML
-    private void clearButtonPressed(ActionEvent event) {
+    private void clearButtonPressed() {
         drawingAreaPane.getChildren().clear();
     }
 
@@ -83,8 +83,8 @@ public class MainFXMLController {
         Circle circle = new Circle();
         circle.setLayoutX(e.getX());
         circle.setLayoutY(e.getY());
-        circle.setRadius(5);
-        circle.setFill(Color.BLACK);
+        circle.setRadius(sizeRadioButtonSelected());
+        circle.setFill(colorRadioButtonSelected());
         drawingAreaPane.getChildren().add(circle);
     }
     

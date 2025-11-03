@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="lab08.MainFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab08.MainFXMLController">
    <children>
       <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="480.0" prefWidth="640.0">
          <padding>
@@ -29,12 +28,12 @@
                            <children>
                               <RadioButton fx:id="blackRadio" mnemonicParsing="false" onAction="#colorRadioButtonSelected" selected="true" text="Black">
                                  <toggleGroup>
-                                    <ToggleGroup fx:id="group1" />
+                                    <ToggleGroup fx:id="group2" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton fx:id="redRadio" mnemonicParsing="false" onAction="#colorRadioButtonSelected" text="Red" toggleGroup="$group1" />
-                              <RadioButton fx:id="greenRadio" mnemonicParsing="false" onAction="#colorRadioButtonSelected" text="Green" toggleGroup="$group1" />
-                              <RadioButton fx:id="blueRadio" mnemonicParsing="false" onAction="#colorRadioButtonSelected" text="Blue" toggleGroup="$group1" />
+                              <RadioButton fx:id="redRadio" mnemonicParsing="false" onAction="#colorRadioButtonSelected" text="Red" toggleGroup="$group2" />
+                              <RadioButton fx:id="greenRadio" mnemonicParsing="false" onAction="#colorRadioButtonSelected" text="Green" toggleGroup="$group2" />
+                              <RadioButton fx:id="blueRadio" mnemonicParsing="false" onAction="#colorRadioButtonSelected" text="Blue" toggleGroup="$group2" />
                            </children>
                         </VBox>
                      </content>
@@ -48,11 +47,11 @@
                            <children>
                               <RadioButton fx:id="smallRadio" mnemonicParsing="false" onAction="#sizeRadioButtonSelected" text="Small">
                                  <toggleGroup>
-                                    <ToggleGroup fx:id="group2" />
+                                    <ToggleGroup fx:id="group1" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton fx:id="mediumRadio" mnemonicParsing="false" onAction="#sizeRadioButtonSelected" selected="true" text="Medium" toggleGroup="$group2" />
-                              <RadioButton fx:id="largeRadio" mnemonicParsing="false" onAction="#sizeRadioButtonSelected" text="Large" toggleGroup="$group2" />
+                              <RadioButton fx:id="mediumRadio" mnemonicParsing="false" onAction="#sizeRadioButtonSelected" selected="true" text="Medium" toggleGroup="$group1" />
+                              <RadioButton fx:id="largeRadio" mnemonicParsing="false" onAction="#sizeRadioButtonSelected" text="Large" toggleGroup="$group1" />
                            </children>
                         </VBox>
                      </content>
